@@ -22,7 +22,7 @@
     <body>
         <!-- Navigation -->
   <div style="height: 56px; background-color: black; width: 100%;">
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top a">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top a" style="border: none;">
       <img src="recursos/imagenes/ADRA Horizontal Logo_1.png" alt="">
     <div class="container">
       <a class="navbar-brand" href="#">SIGCA</a>
@@ -32,18 +32,18 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">HOME
+            <a class="nav-link" href="#" onclick="l(3)">HOME
                   <span class="sr-only">(current)</span>
                 </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">CAPACITACIONES</a>
+            <a class="nav-link" href="#"  onclick="l(2)">CAPACITACIONES</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Cerrar Sesion</a>
+            <a class="nav-link" href="#" onclick="l(1)">CERRAR SESION</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"></a>
+              <a class="nav-link"  id="user" style="color:black" >User</a>
           </li>
         </ul>
       </div>
@@ -51,7 +51,8 @@
   </nav>
 </div>
   
-  <header>
+        <div id="todo" style="margin-top: 8px;">
+             <header>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -131,8 +132,10 @@
     </div>
   </section>
   
+        </div>
   <script src="recursos/js/jquery-3.6.0.min.js"></script>
   <script src="recursos/js/bootstrap.min.js"></script>
-   
+  <script src="recursos/js/main.js" ></script>
+  
     </body>
 </html>

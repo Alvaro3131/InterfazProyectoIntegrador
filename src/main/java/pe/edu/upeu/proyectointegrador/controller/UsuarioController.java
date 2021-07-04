@@ -45,14 +45,8 @@ private Gson gson = new Gson();
 		case 2:
 			String user = request.getParameter("user");
 			String pass = request.getParameter("pass");
-			System.out.println(user+" / "+pass);
-			if(udao.validar(user, pass)==1) {
-				out.println(1);
-			}else {
-				out.println("Bienvenido Usuario:"+user);
-			}
-			break;
-
+			out.println(gson.toJson(udao.validar(user, pass)));
+                        
 		default:
 			break;
 		}

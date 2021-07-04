@@ -19,9 +19,10 @@ public class UsuarioDaoImpl implements UsuarioDao {
 	private Connection cx = null;
 
 	@Override
-	public int validar(String user, String pass) {
+	public Usuario validar(String user, String pass) {
 		// TODO Auto-generated method stub
-		int x = 0;
+		
+                Usuario a = new Usuario();
 		String SQL = "select *from usuario where username=? and password=?";
 		try {
 			cx = Conexion.getConexion();
@@ -30,14 +31,15 @@ public class UsuarioDaoImpl implements UsuarioDao {
 			ps.setString(2, pass);
 			rs = ps.executeQuery();
 			while (rs.next()) {
-				x = 1;
+		            a.setNombre(rs.getString("nombre"));
+                            a.setApellido(rs.getString("apellido"));
 			}
 
 		} catch (Exception e) {
 			// TODO: handle exception
 			System.out.println("Validar: " + e);
 		} 
-		return x;
+		return a;
 	}
 
 	@Override
