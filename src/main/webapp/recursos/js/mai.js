@@ -11,6 +11,9 @@ function l(op){
   if(op==3){
       window.location = 'main.jsp'; 
   }
+   if(op==4){
+      $("#todo").load("vista/gestiondetablaas.jsp");
+  }
   
 
 }
