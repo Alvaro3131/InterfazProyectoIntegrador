@@ -17,3 +17,43 @@ function l(op){
   
 
 }
+
+function g(op){
+  
+  if(op==1){
+        $("#crud").load("vista/socio.jsp");
+  }
+  if(op==2){
+        $("#crud").load("vista/banco.jsp");
+ 
+  }
+   if(op==3){
+        $("#crud").load("vista/Usuario.jsp");
+    }
+   if(op==4){
+        $("#crud").load("vista/nom_rol.jsp");
+  }
+  if(op==5){
+        $("#crud").load("vista/capacitdor.jsp");
+  }
+  if(op==6){
+        $("#crud").load("vista/programa.jsp");
+  }
+  if(op==7){
+        $("#crud").load("vista/capacitacion.jsp");
+  }
+  if(op==8){
+        $("#crud").load("vista/sesion.jsp");
+  }
+   if(op==9){
+        $("#crud").load("vista/recurso.jsp");
+  }
+   if(op==10){
+        $("#crud").load("vista/asistencia.jsp");
+  }
+   if(op==11){
+        $("#crud").load("vista/inscripcion.jsp");
+  }
+  }
+
+

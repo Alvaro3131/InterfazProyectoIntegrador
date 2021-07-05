@@ -26,7 +26,7 @@
                 <nav class="navbar navbar-light " style="display: flex; flex-direction:inherit;">
                     <div style=" display: flex; flex-direction: initial;">
                      <i class="fas fa-share-square" style=" width: 10px; margin-right: 15px; margin-top: 10px;"></i>
-                     <a class="navbar-brand color" href="" style="color: rgb(255, 255, 255); font-size: 18px; " >
+                     <a class="navbar-brand color" href="#" style="color: rgb(255, 255, 255); font-size: 18px; " >
                        Enviar Socio
                      </a>
                    </div>
@@ -34,7 +34,7 @@
                    <nav class="navbar navbar-light " style="display: flex; flex-direction:inherit;">
                     <div style=" display: flex; flex-direction: initial;">
                      <i class="fas fa-registered" style=" width: 10px; margin-right: 15px; margin-top: 10px;"></i>
-                     <a class="navbar-brand color" href="" style="color: rgb(255, 255, 255); font-size: 18px; " onclick="p()">
+                     <a class="navbar-brand color" href="#" style="color: rgb(255, 255, 255); font-size: 18px; " onclick="p()">
                        Registrar Socio
                      </a>
                    </div>
@@ -42,7 +42,7 @@
                  <nav class="navbar navbar-light " style="display: flex; flex-direction:inherit;">
                     <div style=" display: flex; flex-direction: initial;">
                      <i class="fas fa-pen" style=" width: 10px; margin-right: 15px; margin-top: 10px;"></i>
-                     <a class="navbar-brand color" href="" style="color: rgb(255, 255, 255); font-size: 18px; " onclick="p()">
+                     <a class="navbar-brand color" href="#" style="color: rgb(255, 255, 255); font-size: 18px; " onclick="p()">
                        Generar Programa
                      </a>
                    </div>
@@ -50,7 +50,7 @@
                  <nav class="navbar navbar-light " style="display: flex; flex-direction:inherit;">
                     <div style=" display: flex; flex-direction: initial;">
                      <i class="fas fa-check" style=" width: 10px; margin-right: 15px; margin-top: 10px;"></i>
-                     <a class="navbar-brand color" href="" style="color: rgb(255, 255, 255); font-size: 18px; " onclick="p()">
+                     <a class="navbar-brand color" href="#" style="color: rgb(255, 255, 255); font-size: 18px; " onclick="p()">
                        Validar Programa
                      </a>
                    </div>
@@ -58,7 +58,7 @@
                 <nav class="navbar navbar-light " style="display: flex; flex-direction:inherit;">
                     <div style=" display: flex; flex-direction: initial;">
                      <i class="fas fa-user" style=" width: 10px; margin-right: 15px; margin-top: 10px;"></i>
-                     <a class="navbar-brand color" href="" style="color: rgb(255, 255, 255); font-size: 18px; " onclick="p()">
+                     <a class="navbar-brand color" href="#" style="color: rgb(255, 255, 255); font-size: 18px; " onclick="p()">
                        Asignar Capacitador
                      </a>
                    </div>
@@ -66,7 +66,7 @@
                 <nav class="navbar navbar-light " style="display: flex; flex-direction:inherit;">
                     <div style=" display: flex; flex-direction: initial;">
                      <i class="fas fa-folder-open" style=" width: 10px; margin-right: 15px; margin-top: 10px;"></i>
-                     <a class="navbar-brand color" href="" style="color: rgb(255, 255, 255); font-size: 18px; " onclick="p()">
+                     <a class="navbar-brand color" href="#" style="color: rgb(255, 255, 255); font-size: 18px; " onclick="p()">
                        Solicitar Reporte
                      </a>
                    </div>
@@ -74,7 +74,7 @@
                 <nav class="navbar navbar-light " style="display: flex; flex-direction:inherit;">
                     <div style=" display: flex; flex-direction: initial;">
                      <i class="fas fa-file-import" style=" width: 10px; margin-right: 15px; margin-top: 10px;"></i>
-                     <a class="navbar-brand color" href="" style="color: rgb(255, 255, 255); font-size: 18px; " onclick="p()">
+                     <a class="navbar-brand color" href="#" style="color: rgb(255, 255, 255); font-size: 18px; " onclick="p()">
                        Crear Reporte
                      </a>
                    </div>
@@ -82,7 +82,7 @@
                 <nav class="navbar navbar-light " style="display: flex; flex-direction:inherit;">
                     <div style=" display: flex; flex-direction: initial;">
                      <i class="fas fa-signal" style=" width: 10px; margin-right: 15px; margin-top: 10px;"></i>
-                     <a class="navbar-brand color" href="" style="color: rgb(255, 255, 255); font-size: 18px; " onclick="p()">
+                     <a class="navbar-brand color" href="#" style="color: rgb(255, 255, 255); font-size: 18px; " onclick="p()">
                        Crear Informe
                      </a>
                    </div>
