@@ -13,18 +13,18 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import pe.edu.upeu.proyectointegrador.dao.UsuarioDao;
-import pe.edu.upeu.proyectointegrador.daoImpl.UsuarioDaoImpl;
-import pe.edu.upeu.proyectointegrador.model.Usuario;
+import pe.edu.upeu.proyectointegrador.dao.SocioDao;
+import pe.edu.upeu.proyectointegrador.daoImpl.SocioDaoImpl;
+import pe.edu.upeu.proyectointegrador.model.Socio;
 
 /**
  *
  * @author Alvaro Alva
  */
-@WebServlet(name = "UsuarioController", urlPatterns = {"/uc"})
-public class UsuarioController extends HttpServlet {
+@WebServlet(name = "SocioController", urlPatterns = {"/sc"})
+public class SocioController extends HttpServlet {
 private Gson gson = new Gson();
-	private UsuarioDao udao = new UsuarioDaoImpl();
+	private SocioDao udao = new SocioDaoImpl();
 	
 	private static final long serialVersionUID = 1L;
     /**
@@ -39,7 +39,7 @@ private Gson gson = new Gson();
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
+         PrintWriter out = response.getWriter();
 		int op = Integer.parseInt(request.getParameter("opc"));
 	
 		switch (op) {
@@ -48,44 +48,28 @@ private Gson gson = new Gson();
 		          out.println(gson.toJson(udao.readAll()));
                            
 			break;
-		case 2:
-			String user = request.getParameter("user");
-			String pass = request.getParameter("pass");
-			out.println(gson.toJson(udao.validar(user, pass)));
-                        break;
-                case 3://guardar
-                    System.out.println("Caso2");
-                        int q=Integer.parseInt(request.getParameter("idusuario"));
-			String x=request.getParameter("nombre");
-			String w=request.getParameter("apellido");
-                        String e=request.getParameter("apellido2");
-                        String r=request.getParameter("correo");
-                        int t=Integer.parseInt(request.getParameter("telefono"));
-			int y=Integer.parseInt(request.getParameter("dni"));
-                        String u=request.getParameter("u");
-                        String i=request.getParameter("pass");
-			System.out.println(x);
-                        System.out.println(r);
-                        System.out.println(u);
-			out.println(gson.toJson(udao.create(new Usuario(q,x,w,e,r,t,y,u,i))));
+		
+                case 2://guardar
+                   System.out.println("Caso2");
+                        int q=Integer.parseInt(request.getParameter("i"));
+			int r=Integer.parseInt(request.getParameter("b"));
+			String e=request.getParameter("e");
+                        System.out.println(q+r+e);
+                        System.out.println("Hola");
+			out.println(gson.toJson(udao.create(new Socio(q,r,e))));
 			break;
-                case 4://read
+                case 3://read
 			out.println(gson.toJson(udao.read(Integer.parseInt(request.getParameter("id")))));
 			break;
-               case 5://modificar
-			Usuario a = new Usuario();
-                        a.setIdusuario(Integer.parseInt(request.getParameter("i")));
-                        a.setNombre(request.getParameter("nombre"));
-			a.setApellido1(request.getParameter("apellido"));
-                        a.setApellido2(request.getParameter("apellido2"));
-                        a.setCorreo(request.getParameter("correo"));
-                        a.setTelefono(Integer.parseInt(request.getParameter("telefono")));
-                        a.setDni(Integer.parseInt(request.getParameter("dni")));
-                        a.setUsername(request.getParameter("u"));
-                        a.setPassword(request.getParameter("pass"));
+               case 4://modificar
+			Socio a = new Socio();
+                        a.setIdsocio(Integer.parseInt(request.getParameter("i")));
+                        a.setIdbanco(Integer.parseInt(request.getParameter("b")));
+                        a.setEstado(request.getParameter("e"));
+			
 			out.println(gson.toJson(udao.update(a)));
 			break;
-		case 6://eliminar
+		case 5://eliminar
 			int id=Integer.parseInt(request.getParameter("i"));
                         System.out.println(id);
                         System.out.println("Posasasa");
@@ -94,7 +78,6 @@ private Gson gson = new Gson();
 		default:
 			break;
 		}
-        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

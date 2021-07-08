@@ -47,14 +47,7 @@
                    </div>
                    </nav>
                  
-                <nav class="navbar navbar-light " style="display: flex; flex-direction:inherit;">
-                    <div style=" display: flex; flex-direction: initial;">
-                     <i class="fas fa-user" style=" width: 10px; margin-right: 15px; margin-top: 10px;"></i>
-                     <a class="navbar-brand color" href="#" style="color: rgb(255, 255, 255); font-size: 18px; " onclick="g(4)">
-                        Nom_Rol
-                     </a>
-                   </div>
-                 </nav>
+              
                 <nav class="navbar navbar-light " style="display: flex; flex-direction:inherit;">
                     <div style=" display: flex; flex-direction: initial;">
                      <i class="fas fa-folder-open" style=" width: 10px; margin-right: 15px; margin-top: 10px;"></i>
@@ -71,50 +64,11 @@
                      </a>
                    </div>
                  </nav>
-                <nav class="navbar navbar-light " style="display: flex; flex-direction:inherit;">
-                    <div style=" display: flex; flex-direction: initial;">
-                     <i class="fas fa-signal" style=" width: 10px; margin-right: 15px; margin-top: 10px;"></i>
-                     <a class="navbar-brand color" href="#" style="color: rgb(255, 255, 255); font-size: 18px; " onclick="g(7)">
-                        Capacitación
-                     </a>
-                   </div>
-                 </nav>
-                 <nav class="navbar navbar-light " style="display: flex; flex-direction:inherit;">
-                    <div style=" display: flex; flex-direction: initial;">
-                     <i class="fas fa-signal" style=" width: 10px; margin-right: 15px; margin-top: 10px;"></i>
-                     <a class="navbar-brand color" href="#" style="color: rgb(255, 255, 255); font-size: 18px; " onclick="g(8)">
-                        Sesion
-                     </a>
-                   </div>
-                 </nav>
-                 <nav class="navbar navbar-light " style="display: flex; flex-direction:inherit;">
-                    <div style=" display: flex; flex-direction: initial;">
-                     <i class="fas fa-signal" style=" width: 10px; margin-right: 15px; margin-top: 10px;"></i>
-                     <a class="navbar-brand color" href="#" style="color: rgb(255, 255, 255); font-size: 18px; " onclick="g(9)">
-                        Recurso
-                     </a>
-                   </div>
-                 </nav>
-                 <nav class="navbar navbar-light " style="display: flex; flex-direction:inherit;">
-                    <div style=" display: flex; flex-direction: initial;">
-                     <i class="fas fa-signal" style=" width: 10px; margin-right: 15px; margin-top: 10px;"></i>
-                     <a class="navbar-brand color" href="#" style="color: rgb(255, 255, 255); font-size: 18px; " onclick="g(10)">
-                        Asistencia
-                     </a>
-                   </div>
-                 </nav>
-                 <nav class="navbar navbar-light " style="display: flex; flex-direction:inherit;">
-                    <div style=" display: flex; flex-direction: initial;">
-                     <i class="fas fa-signal" style=" width: 10px; margin-right: 15px; margin-top: 10px;"></i>
-                     <a class="navbar-brand color" href="#" style="color: rgb(255, 255, 255); font-size: 18px; " onclick="g(11)">
-                        Inscripcion
-                     </a>
-                   </div>
-                 </nav>
+                
                    
                    
             </div>
-            <div class="col-6" id="crud">
+            <div class="col-10" id="crud">
                 
             </div>
         </div>

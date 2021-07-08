@@ -49,6 +49,6 @@
 
         <script src="recursos/js/jquery-3.6.0.min.js"></script>
 <script src="recursos/js/bootstrap.min.js"></script>
-<script src="recursos/js/funciones.js"></script>
+<script src="recursos/js/login.js"></script>
     </body>
 </html>
