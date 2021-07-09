@@ -90,8 +90,8 @@
                    
                    
             </div>
-            <div class="col-6">
-                
+            <div class="col-10">
+                <a href="https://www.adra.org.pe/pmf/bienestar-integral" target="_blank"> <img src="recursos/imagenes/bienestar integral.jpg" alt="" width="100%" style="margin-top: 30px"></a>
             </div>
         </div>
     </div>

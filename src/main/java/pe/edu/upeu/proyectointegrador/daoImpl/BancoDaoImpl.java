@@ -25,7 +25,7 @@ private PreparedStatement ps = null;
     @Override
     public int create(Banco s) {
        int x = 0;
-		String SQL = "insert into banco_comunal (id_banco_comunal,nombre_banco ) value(?,?)";
+		String SQL = "insert into banco_comunal (id_banco_comunal,nombre_banco ) values(?,?)";
 		try {
 			cx = Conexion.getConexion();
 			ps = cx.prepareStatement(SQL);

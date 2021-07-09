@@ -21,9 +21,24 @@ function login(){
 			}else{
                             alert("Bienvenido: "+x.nombre+ " "+x.apellido1);
                              var user=x.nombre+ " "+x.apellido1;
+                             var x=x.nombre_rol;
                              sessionStorage.setItem('user',user);
-			 window.location = 'http://localhost:8080/ProyectoIntegrador/main.jsp';
-                        
+                              sessionStorage.setItem('rol',x);
+            if (x=="ADMIN") {
+              window.location = 'http://localhost:8080/ProyectoIntegrador/main.jsp';
+            }else{
+            if (x=="COORDINADOR") {
+              window.location = 'http://localhost:8080/ProyectoIntegrador/main_2.jsp';
+            } else{
+             if (x==null) {
+              window.location = 'http://localhost:8080/ProyectoIntegrador/main_1.jsp';
+            }else{
+                window.location = 'http://localhost:8080/ProyectoIntegrador/main1.jsp';
+            }
+            }  
+            }
+            
+                          
 			
 			}
         

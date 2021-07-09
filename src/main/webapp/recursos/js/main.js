@@ -1,5 +1,7 @@
 var data = sessionStorage.getItem('user'); 
+var data1 = sessionStorage.getItem('rol');
 $("#user").html("<b >"+data+"</b>");
+$("#rol").html("<b >"+data1+"</b>");
 function l(op){
   if(op==1){
        window.location=('index.jsp')
@@ -13,9 +15,9 @@ function l(op){
   }
    if(op==4){
       $("#todo").load("vista/gestiondetablaas.jsp");
+         
   }
   
-
 }
 
 function g(op){

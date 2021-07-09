@@ -25,7 +25,7 @@ private PreparedStatement ps = null;
     @Override
     public int create(Capacitador s) {
        int x = 0;
-		String SQL = "insert into capacitador (especialidad,id_usuario ) value(?,?)";
+		String SQL = "insert into capacitador (especialidad,id_usuario ) values(?,?)";
 		try {
 			cx = Conexion.getConexion();
 			ps = cx.prepareStatement(SQL);
@@ -90,9 +90,9 @@ private PreparedStatement ps = null;
 			rs = ps.executeQuery();
 			while (rs.next()) {
 				Capacitador a = new Capacitador();
-				a.setIdcapacitador(rs.getInt("c.id_usuario"));
-                                a.setEspecialidad(rs.getString("c.especialidad"));  
-                                a.setNombre(rs.getString("u.nombre"));
+				a.setIdcapacitador(rs.getInt("id_usuario"));
+                                a.setEspecialidad(rs.getString("especialidad"));  
+                                a.setNombre(rs.getString("nombre"));
                              
 				lista.add(a);
 			}

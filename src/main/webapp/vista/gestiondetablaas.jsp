@@ -73,6 +73,10 @@
             </div>
         </div>
     </div>
-       
+        <script>
+           $(document).ready(function(){
+	$("#crud").load("vista/socio.jsp");
+})
+        </script>
     </body>
 </html>

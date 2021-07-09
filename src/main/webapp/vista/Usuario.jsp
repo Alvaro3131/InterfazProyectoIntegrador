@@ -67,7 +67,7 @@
           <input type="text"class="form-control col-5" id="apellido" placeholder="Apellido_P" style="margin-right: 5px;margin-left:5px; margin-bottom: 5px">
           <input type="text"class="form-control col-5" id="apellido2" placeholder="Apellido_M" style=" margin-bottom: 5px">
           <input type="text"class="form-control col-5" id="correo" placeholder="Correo" style="margin-right: 5px;margin-left:5px; margin-bottom: 5px">
-          <input type="text"class="form-control col-5" id="telefono" placeholder="Telefono" style=" margin-bottom: 5px">
+          <input type="text"class="form-control col-5" id="telefono" placeholder="Telfono" style=" margin-bottom: 5px">
           <input type="text"class="form-control col-5" id="dni" placeholder="Dni" style="margin-right: 5px;margin-left:5px; margin-bottom: 5px">
           <input type="text"class="form-control col-5" id="u" placeholder="Username" style=" margin-bottom: 5px">
           <input type="text"class="form-control col-5" id="pass" placeholder="Password" style="margin-right: 5px;margin-left:5px; margin-bottom: 5px">

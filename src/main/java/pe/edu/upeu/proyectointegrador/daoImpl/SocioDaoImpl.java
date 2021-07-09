@@ -26,7 +26,7 @@ private PreparedStatement ps = null;
     @Override
     public int create(Socio s) {
         int x = 0;
-		String SQL = "insert into socio (id_banco_comunal,id_usuario,estado ) value(?,?,?)";
+		String SQL = "insert into socio (id_banco_comunal,id_usuario,estado ) values(?,?,?)";
 		try {
 			cx = Conexion.getConexion();
 			ps = cx.prepareStatement(SQL);
@@ -92,11 +92,11 @@ private PreparedStatement ps = null;
 			rs = ps.executeQuery();
 			while (rs.next()) {
 				Socio a = new Socio();
-				a.setNbanco(rs.getString("b.nombre_banco"));
-                                a.setNusuario(rs.getString("u.nombre"));
-                                a.setEstado(rs.getString("s.estado"));
+				a.setNbanco(rs.getString("nombre_banco"));
+                                a.setNusuario(rs.getString("nombre"));
+                                a.setEstado(rs.getString("estado"));
                                 
-                                a.setIdsocio(rs.getInt("s.id_usuario"));
+                                a.setIdsocio(rs.getInt("id_usuario"));
 				
 				lista.add(a);
 			}

@@ -42,8 +42,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#" onclick="l(2)">Procesos del Negocio</a>
-          <a class="dropdown-item" href="#"onclick="l(4)" >Gestión</a>
-          <div class="dropdown-divider"></div>
+          
           <a class="dropdown-item" href="#" >Mis Cursos</a>
         </div>
       </li>
@@ -54,7 +53,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#" id="user"></a>
-          <a class="dropdown-item" href="#" id="rol" >Gestión</a>
+          <a class="dropdown-item" href="#" id="rol" ></a>
           
         </div>
       </li>

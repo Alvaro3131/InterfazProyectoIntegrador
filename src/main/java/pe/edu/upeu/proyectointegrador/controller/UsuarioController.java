@@ -67,7 +67,7 @@ private Gson gson = new Gson();
 			System.out.println(x);
                         System.out.println(r);
                         System.out.println(u);
-			out.println(gson.toJson(udao.create(new Usuario(q,x,w,e,r,t,y,u,i))));
+			out.println(gson.toJson(udao.create(new Usuario(q,x,w,e,r,y,t,u,i))));
 			break;
                 case 4://read
 			out.println(gson.toJson(udao.read(Integer.parseInt(request.getParameter("id")))));

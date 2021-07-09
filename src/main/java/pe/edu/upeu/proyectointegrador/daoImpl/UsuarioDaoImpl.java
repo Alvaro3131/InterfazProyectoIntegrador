@@ -23,7 +23,7 @@ public class UsuarioDaoImpl implements UsuarioDao {
 		// TODO Auto-generated method stub
 		
                 Usuario a = new Usuario();
-		String SQL = "select u.Nombre, u.Apellido1, q.nombre_rol   from usuario u join rol_usuario r ON u.id_usuario = r.id_usuario JOIN rol q ON r.id_rol = q.id_rol where username=? and password=?";
+		String SQL = "select u.Nombre, u.Apellido1, q.nombre_rol   from rol_usuario r right join  usuario u ON u.id_usuario = r.id_usuario left JOIN rol q ON r.id_rol = q.id_rol where username=? and password=?";
 		try {
 			cx = Conexion.getConexion();
 			ps = cx.prepareStatement(SQL);
@@ -31,9 +31,9 @@ public class UsuarioDaoImpl implements UsuarioDao {
 			ps.setString(2, pass);
 			rs = ps.executeQuery();
 			while (rs.next()) {
-		            a.setNombre(rs.getString("u.Nombre"));
-                            a.setApellido1(rs.getString("u.Apellido1"));
-                            a.setNombre_rol(rs.getString("q.nombre_rol"));
+		            a.setNombre(rs.getString("NOMBRE"));
+                            a.setApellido1(rs.getString("APELLIDO1"));
+                            a.setNombre_rol(rs.getString("NOMBRE_ROL"));
 			}
 
 		} catch (Exception e) {
@@ -46,7 +46,7 @@ public class UsuarioDaoImpl implements UsuarioDao {
 	@Override
 	public int create(Usuario u) {
 		int x = 0;
-		String SQL = "insert into usuario (id_usuario,nombre ,apellido1,correo,telefono, dni,username, password, apellido2) value(?,?,?,?,?,? ,?,?,?)";
+		String SQL = "insert into usuario (id_usuario,nombre ,apellido1,correo,telefono, dni,username, password, apellido2) values(?,?,?,?,?,? ,?,?,?)";
 		try {
 			cx = Conexion.getConexion();
 			ps = cx.prepareStatement(SQL);
