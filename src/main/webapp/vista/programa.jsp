@@ -45,9 +45,9 @@
                   <input type="hidden" class="form-control col-7"	id="id" value="0" />
                   
                   <button class="btn btn-danger" id="boton1" style="background-color: rgb(119, 230, 147); border: none; margin-left: 15px"data-toggle="modal" data-target="#exampleModal">+</button>
-                  <button class="btn btn-danger" style="margin-left: 10px;background-color: rgb(119, 230, 147);border:none" data-toggle="modal" data-target="#exampleModa">Listar Capacitadores</button>
-                  <button class="btn btn-danger"style="margin-left: 10px;background-color: rgb(119, 230, 147);border:none"data-toggle="modal" data-target="#exampleMo">Listar Capacitacion</button>
-                  <button class="btn btn-danger"style="margin-left: 10px;background-color: rgb(119, 230, 147);border:none"data-toggle="modal" data-target="#example">Listar Categoria</button>
+                  <button class="btn btn-danger" style="margin-left: 10px;background-color: rgb(119, 230, 147);border:none" data-toggle="modal" data-target="#exampleModa" onclick="ca()">Listar Capacitadores</button>
+                  <button class="btn btn-danger"style="margin-left: 10px;background-color: rgb(119, 230, 147);border:none"data-toggle="modal" data-target="#exampleMo" onclick="c()">Listar Capacitacion</button>
+                  <button class="btn btn-danger"style="margin-left: 10px;background-color: rgb(119, 230, 147);border:none"data-toggle="modal" data-target="#example"onclick="p()">Listar Categoria</button>
                 </div>
                   
                 
@@ -65,7 +65,9 @@
                       <th scope="col">Capacitacion</th>
                       <th scope="col">Capacitador</th>
                       <th scope="col">Estado</th>
-                      <th scope="col">Categoria</th>
+                     
+                       <th scope="col">F_Incio</th>
+                        <th scope="col">F_Fin</th>
                       
                       <th scope="col" colspan="2">Acción</th>
                     </tr>
@@ -93,8 +95,8 @@
               <div class="row">
                   <input type="text"class="form-control col-5" id="idprograma" placeholder="Id_Programa" style="margin-right: 5px;margin-left:5px; margin-bottom: 5px">
           <input type="text"class="form-control col-5" id="url" placeholder="URL" style=" margin-bottom: 5px">
-          <input type="text"class="form-control col-5" id="inicio" placeholder="F_Inicio" style="margin-right: 5px;margin-left:5px; margin-bottom: 5px">
-          <input type="text"class="form-control col-5" id="fin" placeholder="F_Fin" style=" margin-bottom: 5px">
+          <input type="date"class="form-control col-5" id="inicio" placeholder="F_Inicio" style="margin-right: 5px;margin-left:5px; margin-bottom: 5px">
+          <input type="date"class="form-control col-5" id="fin" placeholder="F_Fin" style=" margin-bottom: 5px">
           <input type="text"class="form-control col-5" id="categoria" placeholder="Id_Categoria" style="margin-right: 5px;margin-left:5px; margin-bottom: 5px">
           <input type="text"class="form-control col-5" id="capacitacion" placeholder="Id_Capacitacio" style=" margin-bottom: 5px">
           <input type="text"class="form-control col-5" id="capacitador" placeholder="Id_Capacitador" style="margin-right: 5px;margin-left:5px; margin-bottom: 5px">
@@ -114,14 +116,14 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Capacitadores</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
          <div class="container small">
-                <table class="table" id="capacitador">
+                <table class="table" id="c">
                   <thead>
                     <tr>
                       <th scope="col">#</th>
@@ -139,7 +141,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        
       </div>
     </div>
   </div>
@@ -148,14 +150,14 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Capacitación</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
          <div class="container small">
-                <table class="table" id="capacitacion">
+                <table class="table" id="ca">
                   <thead>
                     <tr>
                       <th scope="col">#</th>
@@ -173,7 +175,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+       
       </div>
     </div>
   </div>
@@ -182,14 +184,14 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Estados</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
          <div class="container small">
-                <table class="table" id="categoria">
+                <table class="table" id="p">
                   <thead>
                     <tr>
                       <th scope="col">#</th>
@@ -228,7 +230,7 @@ function listar(){
                 
 		$("#tablita tbody tr").remove();
 		for(var i=0;i<c.length;i++){
-			$("#tablita").append("<tr><td>"+(i+1)+"</td><td>"+c[i].idprograma+"</td><td>"+c[i].nombre+"</td><td>"+c[i].url+"</td><td>"+c[i].nomcapaci+"</td><td>"+c[i].nomcapa+"</td><td>"+c[i].nomcategoria+"</td><td><a href='#' onclick='editar("+c[i].idprograma+")'><i class='far fa-edit'></i></a></td><td><a href='#' onclick='eliminar("+c[i].idprograma+")'><i class='fas fa-trash-alt'></i></a></td></tr>");
+			$("#tablita").append("<tr><td>"+(i+1)+"</td><td>"+c[i].idprograma+"</td><td>"+c[i].nombre+"</td><td>"+c[i].url+"</td><td>"+c[i].nomcapaci+"</td><td>"+c[i].nomcapa+"</td><td>"+c[i].nomcategoria+"</td><td>"+c[i].inicio+"</td><td>"+c[i].fin+"</td><td><a href='#' onclick='editar("+c[i].idprograma+")'><i class='far fa-edit'></i></a></td><td><a href='#' onclick='eliminar("+c[i].idprograma+")'><i class='fas fa-trash-alt'></i></a></td></tr>");
 		}
 	});
 }
@@ -237,13 +239,13 @@ $("#boton2").click(function(){
         var q = $("#u").val();
 	if(idr==0){
         
-	var param = {"idusuario":$("#idusuario").val(),"nombre":$("#nombre").val(),"apellido":$("#apellido").val(),"apellido2":$("#apellido2").val(),"correo":$("#correo").val(),"telefono":$("#telefono").val(),"dni":$("#dni").val(),"u":$("#u").val(),"pass":$("#pass").val(), "opc":3};
+	var param = {"i":$("#idprograma").val(),"u":$("#url").val(),"in":$("#inicio").val(),"fin":$("#fin").val(),"ca":$("#categoria").val(),"cap":$("#capacitacion").val(),"ct":$("#capacitador").val(),"n":$("#nombre").val(), "opc":2};
 	$.ajax({
 		beforeSend: function(){
 			$('#resultado').html('Esperando...!');
 		},
 		data: param,
-		url: 'uc',
+		url: 'pc',
 		type: 'POST',
 		success: function(response){
                         
@@ -265,7 +267,7 @@ $("#boton2").click(function(){
 	});
 	}else{
 		alert($("#id").val()+"/"+$("#nombre").val());
-		$.post("uc",{"i":$("#id").val(),"nombre":$("#nombre").val(),"apellido":$("#apellido").val(),"apellido2":$("#apellido2").val(),"correo":$("#correo").val(),"telefono":$("#telefono").val(),"dni":$("#dni").val(),"u":$("#u").val(),"pass":$("#pass").val(), "opc":5},function (data) {
+		$.post("pc",{"i":$("#idprograma").val(),"u":$("#url").val(),"in":$("#inicio").val(),"fin":$("#fin").val(),"ca":$("#categoria").val(),"cap":$("#capacitacion").val(),"ct":$("#capacitador").val(),"n":$("#nombre").val(), "opc":4},function (data) {
 		listar();
                 $("#exampleModal").modal('hide');
 		limpiar();	
@@ -276,39 +278,69 @@ function editar(id){
          
 	$("#boton2").html("Editar");
         $("#exampleModal").modal('show');
-	$.get("uc",{"id":id,"opc":4},function (data) {
+	$.get("pc",{"id":id,"opc":3},function (data) {
          var x = JSON.parse(data);
+        $("#url").val(x.url)
+        $("#inicio").val(x.inicio)
+         $("#fin").val(x.fin)
+        $("#categoria").val(x.idcategoria)
+        $("#capacitacion").val(x.idcapacitacion)
+        $("#capacitador").val(x.idcapacitador)
         $("#nombre").val(x.nombre)
-        $("#apellido").val(x.apellido1)
-         $("#apellido2").val(x.apellido2)
-        $("#correo").val(x.correo)
-        $("#telefono").val(x.telefono)
-        $("#dni").val(x.dni)
-        $("#u").val(x.username)
-        $("#pass").val(x.password)
-        $("#idusuario").val(x.idusuario);
-        $("#id").val(x.idusuario);
+       
+        $("#idprograma").val(x.idprograma);
+        $("#id").val(x.idprograma);
     });
 }
 function eliminar(id){
     
-	$.get("uc",{"i":id,"opc":6},function () {
+	$.get("pc",{"i":id,"opc":5},function () {
         listar();
     });
 }
 function limpiar(){
-        $("#idusuario").val("");
-	$("#nombre").val("");
-	$("#apellido").val("");
-	$("#apellido2").val("");
-	$("#correo").val("");
-        $("#telefono").val("");
-        $("#dni").val("");
-        $("#u").val("");
-        $("#pass").val("");
+          $("#url").val("")
+        $("#inicio").val("")
+         $("#fin").val("")
+        $("#categoria").val("")
+        $("#capacitacion").val("")
+        $("#capacitador").val("")
+        $("#nombre").val("")
+       
+        $("#idprograma").val("");
 	$("#nombre").focus();
 	$("#id").val(0);
 	$("#boton2").html("Crear");
+}
+function ca(){
+	$.get("cc", {"opc":1}, function(data){
+		var c= JSON.parse(data);
+                
+		$("#c tbody tr").remove();
+		for(var i=0;i<c.length;i++){
+			$("#c").append("<tr><td>"+c[i].idcapacitador+"</td><td>"+c[i].nombre+"</td><td>"+c[i].especialidad+"</td></tr>");
+		}
+	});
+}
+function c(){
+	$.get("cn", {"opc":1}, function(data){
+		var c= JSON.parse(data);
+                
+		$("#ca tbody tr").remove();
+		for(var i=0;i<c.length;i++){
+			$("#ca").append("<tr><td>"+c[i].idcapacitacion+"</td><td>"+c[i].nombre+"</td></tr>");
+		}
+	});
+}
+function p(){
+	$.get("ca", {"opc":1}, function(data){
+		var c= JSON.parse(data);
+                
+		$("#p tbody tr").remove();
+		for(var i=0;i<c.length;i++){
+			$("#p").append("<tr><td>"+c[i].idcategoria+"</td><td>"+c[i].estado+"</td></tr>");
+		}
+	});
 }
 
   </script>

@@ -13,18 +13,17 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import pe.edu.upeu.proyectointegrador.dao.ProgramaDao;
-import pe.edu.upeu.proyectointegrador.daoImpl.ProgramaDaoImpl;
-import pe.edu.upeu.proyectointegrador.model.Programa;
+import pe.edu.upeu.proyectointegrador.dao.CapacitacionDao;
+import pe.edu.upeu.proyectointegrador.daoImpl.CapacitacionDaoImpl;
 
 /**
  *
  * @author Alvaro Alva
  */
-@WebServlet(name = "ProgramaController", urlPatterns = {"/pc"})
-public class ProgramaController extends HttpServlet {
+@WebServlet(name = "Capacitacioncontroller", urlPatterns = {"/cn"})
+public class Capacitacioncontroller extends HttpServlet {
 private Gson gson = new Gson();
-	private ProgramaDao udao = new ProgramaDaoImpl();
+	private CapacitacionDao udao = new CapacitacionDaoImpl();
 	
 	private static final long serialVersionUID = 1L;
     /**
@@ -41,54 +40,15 @@ private Gson gson = new Gson();
         response.setContentType("text/html;charset=UTF-8");
          PrintWriter out = response.getWriter();
 		int op = Integer.parseInt(request.getParameter("opc"));
-	
-		switch (op) {
+      switch (op) {
                 case 1://todos los productos
-                          System.out.println("Caso1");
+                          System.out.println("CasoCapacitador");
 		          out.println(gson.toJson(udao.readAll()));
                            
 			break;
-		case 2://guardar
-                   System.out.println("Caso2");
-                        int q=Integer.parseInt(request.getParameter("i"));
-			
-			String e=request.getParameter("u");
-                        String r=request.getParameter("in");
-                        String t=request.getParameter("fin");
-                        int y=Integer.parseInt(request.getParameter("ca"));
-                        int u=Integer.parseInt(request.getParameter("cap"));
-                        int i=Integer.parseInt(request.getParameter("ct"));
-                         String o=request.getParameter("n");
-                        System.out.println(q+r+e);
-                        System.out.println("Hola");
-			out.println(gson.toJson(udao.create(new Programa(q,o,e,r,t,y,u,i))));
-			break;
-                case 3://read
-			out.println(gson.toJson(udao.read(Integer.parseInt(request.getParameter("id")))));
-			break;
-                case 4://modificar
-			Programa a = new Programa();
-                        a.setIdprograma(Integer.parseInt(request.getParameter("i")));
-                        a.setUrl(request.getParameter("u"));
-                        a.setNombre(request.getParameter("n"));
-                        a.setInicio(request.getParameter("in"));
-                        a.setFin(request.getParameter("fin"));
-                       a.setIdcategoria(Integer.parseInt(request.getParameter("ca")));
-                       a.setIdcapacitacion(Integer.parseInt(request.getParameter("cap")));
-                       a.setIdcapacitador(Integer.parseInt(request.getParameter("ct")));
-                        
-			out.println(gson.toJson(udao.update(a)));
-                        System.out.println("P");
-			break;
-                        case 5://eliminar
-			int id=Integer.parseInt(request.getParameter("i"));
-                        System.out.println(id);
-                        System.out.println("Posasasa");
-			out.println(gson.toJson(udao.delete(id)));
-			break;
 		
+               
 		default:
-                
 			break;
 		}
     }

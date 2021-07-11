@@ -48,7 +48,7 @@ private PreparedStatement ps = null;
     @Override
     public int update(Programa u) {
        int x = 0;
-		String SQL = "update programa_capacitacion set url=?,fecha_inicio=?,fecha_fin=?, id_categoria=?, id_capacitacion=?, id_usuario=? where id_programa = ?";
+		String SQL = "update programa_capacitacion set URL=?, fecha_inicio=?, fecha_fin=? , id_categoria=?, id_capacitacion=?,  id_usuario=?,nombre_programa=?  where id_programa = ? ";
 		try {
 			cx = Conexion.getConexion();
 			ps = cx.prepareStatement(SQL);
@@ -60,7 +60,7 @@ private PreparedStatement ps = null;
                        ps.setInt(4, u.getIdcategoria());
                        ps.setInt(5, u.getIdcapacitacion());
                        ps.setInt(6, u.getIdcapacitador());
-                         ps.setString(7, u.getNombre());
+                       ps.setString(7, u.getNombre());
                          ps.setInt(8, u.getIdprograma());
 			
 			x = ps.executeUpdate();

@@ -48,8 +48,8 @@
                   
                   <button class="btn btn-danger" id="boton1" style="background-color: rgb(119, 230, 147); border: none">Crear</button>
                   <!-- Button trigger modal -->
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="margin-left: 5px; background-color: rgb(119, 230, 147);border:none" >
-  Listar Usuarios
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="margin-left: 5px; background-color: rgb(119, 230, 147);border:none" onclick="listarb()">
+  Listar Bancos
 </button>
 
 <!-- Modal -->
@@ -65,7 +65,7 @@
       <div class="modal-body">
         <div class="modal-body">
          <div class="container small">
-                <table class="table" id="tablit">
+                <table class="table" id="b">
                   <thead>
                     <tr>
                       <th scope="col">#</th>
@@ -249,6 +249,16 @@ function listaru(){
 		$("#tabli tbody tr").remove();
 		for(var i=0;i<c.length;i++){
 			$("#tabli").append("<tr><td>"+c[i].idusuario+"</td><td>"+c[i].nombre+"</td><td>"+c[i].apellido1+"</td></tr>");
+		}
+	});
+}
+function listarb(){
+	$.get("bc", {"opc":1}, function(data){
+		var c= JSON.parse(data);
+                
+		$("#b tbody tr").remove();
+		for(var i=0;i<c.length;i++){
+			$("#b").append("<tr><td>"+c[i].idbanco+"</td><td>"+c[i].nombre+"</td></tr>");
 		}
 	});
 }

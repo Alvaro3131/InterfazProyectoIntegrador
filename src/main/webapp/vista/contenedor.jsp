@@ -27,7 +27,7 @@
                     <div style=" display: flex; flex-direction: initial;">
                      <i class="fas fa-share-square" style=" width: 10px; margin-right: 15px; margin-top: 10px;"></i>
                      <a class="navbar-brand color" href="#" style="color: rgb(255, 255, 255); font-size: 18px; " >
-                       Enviar Socio
+                       Importar DatosSocio
                      </a>
                    </div>
                    </nav>
@@ -35,7 +35,7 @@
                     <div style=" display: flex; flex-direction: initial;">
                      <i class="fas fa-registered" style=" width: 10px; margin-right: 15px; margin-top: 10px;"></i>
                      <a class="navbar-brand color" href="#" style="color: rgb(255, 255, 255); font-size: 18px; " onclick="p()">
-                       Registrar Socio
+                       Generar Programa
                      </a>
                    </div>
                    </nav>
@@ -43,7 +43,7 @@
                     <div style=" display: flex; flex-direction: initial;">
                      <i class="fas fa-pen" style=" width: 10px; margin-right: 15px; margin-top: 10px;"></i>
                      <a class="navbar-brand color" href="#" style="color: rgb(255, 255, 255); font-size: 18px; " onclick="p()">
-                       Generar Programa
+                       Generar Capacitacion
                      </a>
                    </div>
                    </nav>
