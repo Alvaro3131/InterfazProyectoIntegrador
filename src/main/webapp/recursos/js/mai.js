@@ -17,6 +17,10 @@ function l(op){
       $("#todo").load("vista/gestiondetablaas.jsp");
          
   }
+  if(op==5){
+      $("#todo").load("Principal.jsp");
+         
+  }
   
 }
 

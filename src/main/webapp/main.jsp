@@ -42,9 +42,9 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#" onclick="l(2)">Procesos del Negocio</a>
-          <a class="dropdown-item" href="#"onclick="l(4)" >Gestión</a>
+          <a class="dropdown-item" href="#"onclick="l(4)" >Mantenimiento</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#" >Mis Cursos</a>
+          <a class="dropdown-item" href="#"onclick="l(5)" >Cursos</a>
         </div>
       </li>
          
@@ -151,7 +151,7 @@
         </div>
   <script src="recursos/js/jquery-3.6.0.min.js"></script>
   <script src="recursos/js/bootstrap.min.js"></script>
-  <script src="recursos/js/main.js" ></script>
+  <script src="recursos/js/mai.js" ></script>
   
     </body>
 </html>
